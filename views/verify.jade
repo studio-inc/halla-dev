@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    h3 Sign Up and enter the verification code you'll recieve on your mobile device
+
+    form(
+        action='/finalize', 
+        method='post'
+    )
+        input(
+            type='text',
+            placeholder='username',
+            name='username',
+            required,
+            autofocus
+        )
+        br
+        input(
+            type='number',
+            placeholder='phone number',
+            name='phone'
+        )
+        br
+        input(
+            type='submit',
+            value='Verify Account'
+        )

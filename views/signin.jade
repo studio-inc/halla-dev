@@ -1,0 +1,44 @@
+extends layout
+
+block content
+
+    header
+        h1 Location
+        form(
+            name='output'
+        )
+            output(
+                name='geolocation'
+            )
+
+    //form to fill out user data
+    form(
+        action='/verify', 
+        method='post'
+        )
+        input(
+            type='tel', 
+            placeholder='enter your phone number', 
+            name='phone', 
+            required, 
+            autofocus
+            )
+        br
+        input(
+            type='number',
+            name='lat',
+            placeholder='latitude'
+        )
+        br
+        input(
+            type='number',
+            name='lon',
+            placeholder='longitude'
+        )
+        br
+        input(
+            type='submit', 
+            value='send code'
+            )
+
+    script(src='/javascripts/signin.js')

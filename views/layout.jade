@@ -1,7 +1,15 @@
 doctype html
-html
+html(ng-app)
   head
     title= title
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    
     link(rel='stylesheet', href='/stylesheets/style.css')
+
+    link(rel='manifest', href='/manifest.json')
+
+    //include angularJS
+    script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js')
   body
     block content
